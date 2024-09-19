@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express()
 const port = 3000
-const BookModel = require('./models/User')
+const UserModel = require('./models/User')
 const router =require('./src/router')
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
@@ -11,7 +11,7 @@ const initApp = async() =>{
             console.log(`Example app listening at http://localhost:${port}/`)
         })
 
-        BookModel.sync()
+        UserModel.sync()
         console.log("Database successfully connected")
     } catch (error) {
         console.log(error)
@@ -24,3 +24,13 @@ app.get("/",(req,res)=>{
 })
 app.use('/router',router)
 initApp()
+
+// post
+// get
+// patch
+// put
+// delete
+
+// server.js one File
+// 2 file 
+

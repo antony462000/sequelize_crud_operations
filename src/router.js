@@ -5,8 +5,8 @@ const updateC = require('./controllers/updateC')
 
 const router = require('express').Router()
 
-router.post('/create-book',createUserC)
-router.get('/read-user',readC)
+router.post('/create_user',createUserC)
+router.get('/read_user',readC)
 router.put('/update_user',updateC)
 router.delete('/delete_user',deleteC)
 module.exports=router
