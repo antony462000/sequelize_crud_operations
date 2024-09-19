@@ -4,10 +4,10 @@ module.exports = async(req,res) =>{
     const Responder = new responder(res)
     try {
         var deleteUser = await deleteS(req.body)
-        Responder.success(
+        return Responder.success(
             {message:"Succefully Deleted",
             payload:deleteUser})
     } catch (error) {
-        Responder.fail(error);
+        return Responder.fail(error);
     }
 }

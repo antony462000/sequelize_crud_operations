@@ -8,6 +8,6 @@ module.exports=async(req,res)=>{
             message:"Successfully Updated ",
             payload:updateUser})
     } catch (error) {
-        Responder.fail(error.message)
+        return Responder.fail(error.message)
     }
 }

@@ -6,11 +6,11 @@ module.exports = async (req, res) => {
     try {
         console.log(req)
         var user = await createUserS(req.body)
-        Responder.success({
+        return Responder.success({
             message:"Successfully Created",
             payload:user})
     } catch (error) {
-       Responder.fail(error.message ?? "Internal server error")
+         return Responder.fail(error.message ?? "Internal server error")
     }
 
 }
