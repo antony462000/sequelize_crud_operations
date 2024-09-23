@@ -4,7 +4,6 @@ const responder = require("../shared/responder")
 module.exports = async (req, res) => {
      const Responder= new responder(res)
     try {
-        console.log(req)
         var user = await createUserS(req.body)
         return Responder.success({
             message:"Successfully Created",

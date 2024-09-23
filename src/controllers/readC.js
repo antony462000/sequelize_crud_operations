@@ -10,6 +10,7 @@ module.exports=async(req,res)=>{
             payload:viewUser
         })
     } catch (error) {
+        console.log(error)
         return Responder.fail(error)
     }
 }

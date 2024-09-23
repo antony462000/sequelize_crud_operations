@@ -4,7 +4,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "sequelize": "npx sequelize"
   },
   "keywords": [],
   "author": "Antony",
@@ -16,5 +17,8 @@
     "postgresql": "^0.0.1",
     "sequelize": "^6.37.3"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "sequelize-cli": "^6.6.2"
+  }
 }

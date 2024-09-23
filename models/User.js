@@ -2,7 +2,7 @@
 const { DataTypes } = require('sequelize')
 const { sequelize } = require('../database')
 const User = sequelize.define(
-    "User",
+    "users",
     {
         id:{
             type:DataTypes.UUID,
@@ -22,6 +22,13 @@ const User = sequelize.define(
         mob:{
             type:DataTypes.STRING,
         },
+        deletedAt:{
+            type:DataTypes.DATE
+        }
+    },
+    {
+        timestamps : true,
+        paranoid: true
     },
     {
 
